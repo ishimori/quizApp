@@ -30,33 +30,37 @@
 
 <ons-page>
   <ons-toolbar>
-    <div class="center">Tab 1</div>
+    <div class="left">
+      <ons-toolbar-button onclick="prev()">
+        <ons-icon icon="md-chevron-left"></ons-icon>
+      </ons-toolbar-button>
+    </div>
+    <div class="center">Carousel</div>
+    <div class="right">
+      <ons-toolbar-button onclick="next()">
+        <ons-icon icon="md-chevron-right"></ons-icon>
+      </ons-toolbar-button>
+    </div>
   </ons-toolbar>
 
-  <ons-tabbar position="auto">
-    <ons-tab page="tab1.html" label="Tab 1" icon="ion-home, material:md-home" badge="7" active>
-    </ons-tab>
-    <ons-tab page="tab2.html" label="Tab 2" icon="md-settings" active-icon="md-face">
-    </ons-tab>
-  </ons-tabbar>
+  <ons-carousel fullscreen swipeable auto-scroll overscrollable id="carousel">
+    <ons-carousel-item style="background-color: #085078;">
+      <div style="text-align: center; font-size: 30px; margin-top: 20px; color: #fff;">
+        BLUE
+      </div>
+    </ons-carousel-item>
+    <ons-carousel-item style="background-color: #373B44;">
+      <div style="text-align: center; font-size: 30px; margin-top: 20px; color: #fff;">
+        DARK
+      </div>
+    </ons-carousel-item>
+    <ons-carousel-item style="background-color: #D38312;">
+      <div style="text-align: center; font-size: 30px; margin-top: 20px; color: #fff;">
+        ORANGE
+      </div>
+    </ons-carousel-item>
+  </ons-carousel>
 </ons-page>
-
-<ons-template id="tab1.html">
-  <ons-page id="Tab1">
-    <p style="text-align: center;">
-      This is the first page.
-    </p>
-  </ons-page>
-</ons-template>
-
-<ons-template id="tab2.html">
-  <ons-page id="Tab2">
-    <p style="text-align: center;">
-      This is the second page.
-    </p>
-  </ons-page>
-</ons-template>
-
 <!----------------------------- ここより↑ -------------------------------->    
 </body>
 </html>
