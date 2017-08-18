@@ -1,33 +1,58 @@
-window.fn = {};
+// Page init event
 
-window.fn.toggleMenu = function () {
-  document.getElementById('appSplitter').right.toggle();
-};
+ var playlist;  // variable used to remember the name of the playlist being opened
 
-window.fn.loadView = function (index) {
-  document.getElementById('appTabbar').setActiveTab(index);
-  document.getElementById('sidemenu').close();
-};
+ document.addEventListener('init', function(event) {
+   var page = event.target; 
 
-window.fn.loadLink = function (url) {
-  window.open(url, '_blank');
-};
+   if (page.matches('#playlist-page')) {  //when the playlist-page is initialized the name of the selected playlist will be written on the toolbar
 
-window.fn.pushPage = function (page, anim) {
-  if (anim) {
-    document.getElementById('appNavigator').pushPage(page.id, { data: { title: page.title }, animation: anim });
-  } else {
-    document.getElementById('appNavigator').pushPage(page.id, { data: { title: page.title } });
-  }
-};
+     page.querySelector('#playlist_title').innerHTML = playlist;
 
-ons.ready(function () {
-  const sidemenu = document.getElementById('appSplitter');
-  ons.platform.isAndroid() ? sidemenu.right.setAttribute('animation', 'overlay') : sidemenu.right.setAttribute('animation', 'reveal');
+     //the postchange event is used to change the dots indicating which carousel is currently displayed
 
-  document.querySelector('#tabbar-page').addEventListener('postchange', function(event) {
-    if (event.target.matches('#appTabbar')) {
-      event.currentTarget.querySelector('ons-toolbar .center').innerHTML = event.tabItem.getAttribute('label');
-    }
-  });
-});
+     page.querySelector('#carousel').addEventListener("postchange", function() {
+       page.querySelector('#dot1').classList.toggle("circle_current");
+       page.querySelector('#dot2').classList.toggle("circle_current");
+     });
+
+   }
+
+   if (page.matches('#play-page')) {
+     page.querySelector('#from_playlist').innerHTML = playlist;
+
+     page.querySelector('#back_button').onclick = function() {
+       document.querySelector('#navigator').popPage();
+     };
+   }
+
+ });
+
+ // The openPlaylist is used to open the playlist screen with the proper name.
+
+ function openPlaylist(id) {
+   playlist = document.querySelector('#'+id + "_name").innerHTML;
+   document.querySelector('#navigator').pushPage('playlist.html');
+ }
+
+  // The shuffle_play is used to display the toast on the bottom of the screen
+
+ function shuffle_play() {
+   if (document.querySelector('ons-toast').style.display == "none") {
+     document.querySelector('ons-toast').show();
+   }
+   document.getElementById("play_icon").classList.remove("fa-play-circle-o");
+   document.getElementById("play_icon").classList.add("fa-pause-circle-o");
+ }
+
+ function openPlayScreen() {
+   document.querySelector('#navigator').pushPage('play.html', { animation: "lift" });
+ }
+
+ // Used to togle the play/paused icon on the play screen and the toast on the playlist page
+
+ function play_toggle(id)　{
+   document.getElementById(id).classList.toggle("fa-pause-circle-o");
+   document.getElementById(id).classList.toggle("fa-play-circle-o"); 
+ }
+ 
