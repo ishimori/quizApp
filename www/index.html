@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+  <script src="components/loader.js"></script>
+  <script src="lib/onsenui/js/onsenui.min.js"></script>
+
+  <link rel="stylesheet" href="components/loader.css">
+  <link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
+  <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="js/test1.js"></script>
+
+
+  <script>
+  </script>
+</head>
+<body>
+<!--
+    https://tutorial.onsen.io/?framework=vanilla&category=reference&module=tabbar
+　　から動かしたいサンプルを探したら、
+　　1.HTMLを下の部分に貼り付ける
+　　2.<template>は<ons-template>に訂正する
+　　3.Javascriptはtest.jsに貼り付ける
+-->
+<!----------------------------- ここより↓ -------------------------------->    
+
+<ons-page>
+  <ons-toolbar>
+    <div class="center">Tab 1</div>
+  </ons-toolbar>
+
+  <ons-tabbar position="auto">
+    <ons-tab page="tab1.html" label="Tab 1" icon="ion-home, material:md-home" badge="7" active>
+    </ons-tab>
+    <ons-tab page="tab2.html" label="Tab 2" icon="md-settings" active-icon="md-face">
+    </ons-tab>
+  </ons-tabbar>
+</ons-page>
+
+<ons-template id="tab1.html">
+  <ons-page id="Tab1">
+    <p style="text-align: center;">
+      This is the first page.
+    </p>
+  </ons-page>
+</ons-template>
+
+<ons-template id="tab2.html">
+  <ons-page id="Tab2">
+    <p style="text-align: center;">
+      This is the second page.
+    </p>
+  </ons-page>
+</ons-template>
+
+<!----------------------------- ここより↑ -------------------------------->    
+</body>
+</html>
