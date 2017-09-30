@@ -1,0 +1,49 @@
+<ons-page id="setting"> 
+    <ons-toolbar>
+        <div class="left">
+            <ons-toolbar-button onclick="nav.popPage();">
+                <ons-icon icon="ion-android-arrow-back"> back</ons-icon>
+            </ons-toolbar-button>
+        </div>
+        <div class="center">設定</div>
+    </ons-toolbar>
+    <p>
+  <div style="text-align: center; margin-top: 30px;">
+    <p>
+      <ons-input id="username" modifier="underbar" placeholder="Username" float></ons-input>
+    </p>
+    <p>
+      <ons-input id="password" modifier="underbar" type="password" placeholder="Password" float></ons-input>
+    </p>
+    <p style="margin-top: 30px;">
+      <ons-button >パスワード再設定</ons-button>
+    </p>
+  </div>
+
+  <ons-list>
+    <ons-list-header>所属事業所</ons-list-header>
+  <ons-select id="choose-sel" onchange="">
+    <option value="basic">XXXXXXXX事業所</option>
+    <option value="basic">XXXXXXXX事業所</option>
+    <option value="basic">XXXXXXXX事業所</option>
+    <option value="basic">XXXXXXXX事業所</option>
+    <option value="basic">XXXXXXXX事業所</option>
+  </ons-select>    
+  </ons-list>
+
+  <ons-list>
+    <ons-list-header>YYYYY</ons-list-header>
+  <ons-select id="choose-sel" onchange="">
+    <option value="basic">XXXXXXXX事業所</option>
+    <option value="basic">XXXXXXXX事業所</option>
+    <option value="basic">XXXXXXXX事業所</option>
+    <option value="basic">XXXXXXXX事業所</option>
+    <option value="basic">XXXXXXXX事業所</option>
+  </ons-select>    
+  </ons-list>
+    <BR/><BR/>
+    <ons-button id="btnLogout" modifier="large" onclick="nav.popPage();">設定する</ons-button>
+
+    </p>
+
+</ons-page>

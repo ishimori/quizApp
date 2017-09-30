@@ -1,0 +1,90 @@
+<ons-page id="notice"> 
+
+    <ons-toolbar> 
+        <div class="center header_title">お知らせ</div> 
+        <div class="right">
+            <ons-toolbar-button onclick="nav.pushPage('notice_add.html',{'animation':'lift'});">
+                <ons-icon icon="fa-plus"></ons-icon>
+            </ons-toolbar-button>
+        </div>
+    </ons-toolbar>
+
+  年月
+  <ons-select id="choose-sel" onchange="">
+    <option value="basic">2017年8月</option>
+    <option value="material">2017年9月</option>
+    <option value="underbar">2017年10月</option>
+  </ons-select>    
+  お知らせ種別
+  <ons-select id="choose-sel" onchange="">
+    <option value="basic">全て</option>
+    <option value="material">業務関連</option>
+    <option value="underbar">福利厚生</option>
+    <option value="underbar">その他</option>
+  </ons-select>    
+  <HR>
+    
+  <ons-list modifier="inset">
+    <ons-list-header>お知らせ</ons-list-header>
+    <ons-list-item modifier="chevron" onclick="nav.pushPage('notice_detail1.html',{'animation':'slide'});">
+      <div class="left">
+        <ons-icon icon="fa-bell-o"></ons-icon>
+      </div>
+      <div class="center">
+        <span class="list-item__title">システムメンテナンスについて</span>
+        <span class="list-item__subtitle">2017.9.10 12:30</span>
+      </div>
+    </ons-list-item>
+    <ons-list-item modifier="chevron" onclick="nav.pushPage('notice_detail1.html',{'animation':'slide'});">
+      <div class="left">
+        <ons-icon icon="fa-bell-o"></ons-icon>
+      </div>
+      <div class="center">
+        <span class="list-item__title">システムメンテナンスについて</span>
+        <span class="list-item__subtitle">2017.9.10 12:30</span>
+      </div>
+    </ons-list-item>
+    <ons-list-item modifier="chevron" onclick="nav.pushPage('notice_detail1.html',{'animation':'slide'});">
+      <div class="left">
+        <ons-icon icon="fa-bell-o"></ons-icon>
+      </div>
+      <div class="center">
+        <span class="list-item__title">システムメンテナンスについて</span>
+        <span class="list-item__subtitle">2017.9.10 12:30</span>
+      </div>
+    </ons-list-item>
+    <ons-list-item modifier="chevron" onclick="nav.pushPage('notice_detail1.html',{'animation':'slide'});">
+      <div class="left">
+        <ons-icon icon="fa-bell-o"></ons-icon>
+      </div>
+      <div class="center">
+        <span class="list-item__title">システムメンテナンスについて</span>
+        <span class="list-item__subtitle">2017.9.10 12:30</span>
+      </div>
+    </ons-list-item>
+    <ons-list-item modifier="chevron" onclick="nav.pushPage('notice_detail1.html',{'animation':'slide'});">
+      <div class="left">
+        <ons-icon icon="fa-bell-o"></ons-icon>
+      </div>
+      <div class="center">
+        <span class="list-item__title">システムメンテナンスについて</span>
+        <span class="list-item__subtitle">2017.9.10 12:30</span>
+      </div>
+    </ons-list-item>
+    <ons-list-item modifier="chevron" onclick="nav.pushPage('notice_detail1.html',{'animation':'slide'});">
+      <div class="left">
+        <ons-icon icon="fa-bell-o"></ons-icon>
+      </div>
+      <div class="center">
+        <span class="list-item__title">システムメンテナンスについて</span>
+        <span class="list-item__subtitle">2017.9.10 12:30</span>
+      </div>
+    </ons-list-item>
+    
+
+  </ons-list>
+    <a href="" ><ons-icon icon="md-zoom-in"></ons-icon>もっと見る</A>
+    <BR/>
+    <BR/>
+    
+</ons-page>
