@@ -4,10 +4,12 @@ Login = {
         // ログイン済か
         Auth.checkLogined(
             function () {
-                page.querySelector('#login_username').value = localStorage.getItem('account');
-                page.querySelector('#login_password').value = localStorage.getItem('password');
+                // ログイン画面のID/PASSWORDを表示
+                //page.querySelector('#login_username').value = localStorage.getItem('account');
+                //page.querySelector('#login_password').value = localStorage.getItem('password');
                 
-                //nav.pushPage('tab.html', {animation: 'none'});
+                // ログイン後画面に自動遷移
+                nav.pushPage('tab.html', {animation: 'none'});
             },function () {
                 console.log("認証情報がLocalStorageにないのでログインページ表示します。");
                 //nav.pushPage('login.html', {animation: 'none'});
