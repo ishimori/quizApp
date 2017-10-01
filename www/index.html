@@ -49,8 +49,19 @@
 
         });
         document.addEventListener('show', function (event) {
-            //var page = event.target;
-            //console.log(page.id);
+            var page = event.target;
+            console.log(page.id);
+            
+            switch (page.id) {
+                case 'home': {
+                    Home.init(page,　nav);
+                    break;
+                }
+                case 'notice_detail1': {
+                    alert(page.data.title + page.data.content + page.data.fileKey);
+                    break;
+                }
+            }
 
         });
         document.addEventListener('init', function (event) {
@@ -69,10 +80,12 @@
                     Login.init(page, nav);
                     break;
                 }
+                /*
                 case 'home': {
                     Home.init(page,　nav);
                     break;
                 }
+                */
                 case 'other': {
                     Other.init(page, nav);
                     break;

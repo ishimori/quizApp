@@ -22,13 +22,13 @@ function getter(pKey){
             return "https://southeastasia.api.cognitive.microsoft.com/vision/v1.0/describe";
             break;
         case "kintoneToken":
-            return "am2FnNx5Mt6zfhJqdCQ1KI4PT9EfzSvZoZlaXN1S";
+            return "c2xekErUxLIYjyJE9Z9U1l6WsUR56lvicnRiJtP2";
             break;
         case "kintoneSubdomain":
             return "1cx5k";
             break;
         case "kintoneAppId":
-            return 49;
+            return 53;
             break;
         case "kintoneUserName":
             return "いしもり";
