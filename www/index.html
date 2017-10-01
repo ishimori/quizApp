@@ -59,12 +59,18 @@
             console.log(page.id);
 
             switch (page.id) {
+                
+                case 'empty': {
+                    Login.init(page, nav);
+                    break;
+                }
+
                 case 'login': {
                     Login.init(page, nav);
                     break;
                 }
                 case 'home': {
-                    Home.init(page,　nav);
+                    //Home.init(page,　nav);
                     break;
                 }
                 case 'other': {
@@ -94,6 +100,9 @@
 </head>
 
 <body>
+<!--
+    <ons-navigator id="nav" var="nav" page="empty.html">
+-->
     <ons-navigator id="nav" var="nav" page="login.html">
     </ons-navigator>
 

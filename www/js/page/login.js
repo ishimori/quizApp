@@ -1,5 +1,19 @@
 Login = {
     init: function (page, nav) {
+        
+        // ログイン済か
+        Auth.checkLogined(
+            function () {
+                page.querySelector('#login_username').value = localStorage.getItem('account');
+                page.querySelector('#login_password').value = localStorage.getItem('password');
+                
+                //nav.pushPage('tab.html', {animation: 'none'});
+            },function () {
+                console.log("認証情報がLocalStorageにないのでログインページ表示します。");
+                //nav.pushPage('login.html', {animation: 'none'});
+            });
+
+/*
         // ログイン済か
         Auth.checkLogined(
             function (response) {
@@ -10,6 +24,8 @@ Login = {
             },function () {
                 console.log("認証情報がLocalStorageにないのでログインページ表示します。");
             });
+
+*/
 
         // ログイン処理
         page.querySelector('#login_btn').onclick = function () {
