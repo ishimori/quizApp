@@ -22,6 +22,8 @@
     <!-- タブ毎にJavascript分ける -->
     <script src="js/page/login.js"></script>
     <script src="js/page/home.js"></script>
+    <script src="js/page/answer.js"></script>
+    
     <script src="js/page/other.js"></script>
     <script src="js/camera.js"></script>
     <script src="js/score.js"></script>
@@ -53,14 +55,22 @@
             console.log(page.id);
             
             switch (page.id) {
+                /*
                 case 'home': {
                     Home.init(page,　nav);
                     break;
                 }
+                */
                 case 'notice_detail1': {
-                    alert(page.data.title + page.data.content + page.data.fileKey);
+                    //alert(page.data.title + page.data.content + page.data.fileKey);
+                    Home.notice_detail(page,nav);
                     break;
                 }
+                case 'start_answer': {
+                    Answer.start_page(page,nav);
+                    break;
+                }
+                
             }
 
         });
@@ -80,12 +90,10 @@
                     Login.init(page, nav);
                     break;
                 }
-                /*
                 case 'home': {
                     Home.init(page,　nav);
                     break;
                 }
-                */
                 case 'other': {
                     Other.init(page, nav);
                     break;

@@ -23,10 +23,10 @@ Notices = {
             
             // 検索結果を表示
             //showKintoneResult(data.records);
-            //alert(data.records);
+            //alert(JSON.stringify( data.records));
             success(data.records);
         }).fail(function(XMLHttpRequest, textStatus, errorThrown) {
-            alert('failure');
+            //alert('failure');
             var msg = "kintone取得失敗：" + textStatus + errorThrown;
             toast(msg);
             error();

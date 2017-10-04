@@ -10,6 +10,7 @@ Login = {
                 
                 // ログイン後画面に自動遷移
                 nav.pushPage('tab.html', {animation: 'none'});
+                //nav.pushPage('index.html', {animation: 'none'});
             },function () {
                 console.log("認証情報がLocalStorageにないのでログインページ表示します。");
                 //nav.pushPage('login.html', {animation: 'none'});
