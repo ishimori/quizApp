@@ -113,3 +113,66 @@ h1 {
 #home .box {
   margin: 10px 0px 20px;
 }
+
+/* ### quiz ### */
+.quiz-page {
+  color: #6C6C6C;
+}
+.quiz-page > .page__background {
+  background: white;
+}
+.question-box {
+  box-sizing: border-box;
+  border: 2px solid #76A445;
+  margin: 11px 12px 6px;
+  border-radius: 4px;
+  padding: 8px;
+  font-size: 18px;
+  box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.3);
+}
+.question-box .question-no {
+  margin: 0px;
+  padding: 0px;
+  font-size: 18px;
+  font-weight: normal;
+}
+.question-box .question-text {
+  margin: 0px;
+  padding: 0px;
+}
+.answer-wrapper {
+  padding: 0 10px;
+}
+.answer-wrapper .answer-item {
+  margin: 0 10px;
+}
+.timelimit-wrapper {
+  margin: 0px 0px 20px;
+}
+.timelimit-wrapper > * {
+  width: 100%;
+}
+
+.button--answer {
+  width: 100%;
+  text-align: center;
+  font-size: 40px;
+  height: 50px;
+  line-height: 50px;
+  padding: 0px;
+  margin: 0px;
+  background: #76A444;
+}
+.button--answer:active {
+  background: rgba(118, 164, 68, 0.81);
+}
+.progress-bar--timelimit-bar {
+  height: 14px;
+  background-color: #F1A000;
+  background: linear-gradient(#FFC550, #F1A000);
+  border: 3px solid #996600;
+  box-sizing: border-box;
+}
+.progress-bar--timelimit-bar__primary {
+  background-color: #664400;
+}
