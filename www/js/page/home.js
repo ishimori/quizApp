@@ -23,7 +23,7 @@ Home = {
                         .on('click', function (e) {
                             //console.log(record.id);
                             //nav.pushPage('notice_detail1.html', { 'animation': 'slide',data:{ title:wRec["タイトル"]["value"],content:wRec["お知らせ内容"]["value"],fileKey:wRec["添付ファイル"]["value"][0].fileKey} });
-                            nav.pushPage('notice_detail1.html',
+                            nav.pushPage('notice_detail.html',
                             {'animation':'slide',data:{title:wTitle,content:wContents,fileKey:wFileKey}});
                             
                         });
