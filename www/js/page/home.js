@@ -43,12 +43,16 @@ Home = {
         page.querySelector('.title').innerHTML=page.data.title;
         page.querySelector('.content').innerHTML=page.data.content;
         page.querySelector('.fileKey').innerHTML=page.data.fileKey;
-        
-        //test();
-        function test(){
-            
-            alert('this is test.');
-        }
-        
+
+        let img = document.createElement('img');
+        //img.setAttribute("width","60px");
+        img.setAttribute("width","100%");
+        //style="width: 100%"
+        img.setAttribute("id",page.data.fileKey);    // IDをキーに非同期で画像を貼り付ける
+
+        page.querySelector('.fileKey').appendChild(img);
+
+        Notices.setImage(page.data.fileKey, img);
+ 
     }
 }

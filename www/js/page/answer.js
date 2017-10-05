@@ -28,7 +28,7 @@ Answer = {
         
     },
     break_quiz:function(){
-        alert('break_quiz');
+        //alert('break_quiz');
         let nav = document.querySelector('#nav');
             //nav.pushPage('login.html',{'animation':'none'});
             nav.resetToPage('login.html',{'animation':'none'});

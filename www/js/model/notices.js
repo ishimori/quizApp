@@ -34,32 +34,32 @@ Notices = {
             loading_modal.hide();
             Notices.loaded_at = loaded_at;
         });
-    
-
-        
-/*        
-        $.ajax({
-            type: 'GET',
-            url: Config.BASE_URL + 'notices/list',
-            cache: false,
-            data: {
-                'limit': limit,
-                'page': page,
-                'loaded_at': loaded_at
-            },
-            dataType: 'json'
-        })
-            .done(success)
-            .fail(error)
-            .always(function () {
-                loading_modal.hide();
-                Notices.loaded_at = loaded_at;
-            });
-            */
     },
-    
     detail: function(success, error, pId){
         
+    },
+    setImage:function(pFileKey, pImg){
+        var data = null;
+        var xhr = new XMLHttpRequest();
+    
+        xhr.addEventListener("readystatechange", function () {
+    	  if (this.readyState === 4) {
+    		var blob = new Blob([xhr.response],{type:"image/jpg"});
+    		var url = window.URL || window.webkitURL;
+    		var blobUrl = url.createObjectURL(blob);
+    
+            //var img = document.getElementById(pFileKey);
+    		pImg.src = blobUrl;
+    
+    	  }
+    	});
+    
+        xhr.open("GET", "https://"+getter('kintoneSubdomain')+".cybozu.com/k/v1/file.json?fileKey="+pFileKey);
+    	xhr.setRequestHeader("x-cybozu-api-token", getter('kintoneToken'));
+        xhr.setRequestHeader('X-Requested-With' , 'XMLHttpRequest');
+        xhr.responseType = 'blob';
+    
+    	xhr.send(data);
     }
     
     
